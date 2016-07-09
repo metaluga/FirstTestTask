@@ -8,7 +8,7 @@ namespace TestTask1
 {
     class Rotation
     {
-        public static int[,] rotates_imagesM(int[,] img) //limited memory
+        public static int[,] rotates_images(int[,] img)
         {
             int scale = img.GetUpperBound(0) + 1;
             
@@ -26,18 +26,6 @@ namespace TestTask1
             return img;
         }
 
-        public static int[,] rotates_imagesF(int[,] img) //limited time
-        {
-            int scale = img.GetUpperBound(0) + 1;
-            int[,] outArr = new int[scale, scale];
-
-            for(int i = 0; i< scale; i++)
-                for (int j = 0; j< scale; j++)
-                    outArr[i, j] = img[scale - j - 1, i];
-
-
-            return outArr;
-        }
 
     }
 }
